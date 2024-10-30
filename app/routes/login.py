@@ -13,4 +13,4 @@ def login(login: LoginModel, session: SessionDep):
     if user is None or not auth_password(login.password, user.password):
         raise HTTPException(status_code = 401, detail = "Email ou senha inválidos")
     
-    return { "jwt": create_token(data={"sub": user.email})}
+    return {"jwt": create_token(data={"sub": user.email})}

@@ -1,6 +1,12 @@
 from fastapi import FastAPI, Depends, APIRouter, HTTPException, Query
 from app.database import SessionDep
-from app.utils import auth_user
+from app.utils import verify_credentials
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 
 router = APIRouter()
 
@@ -8,16 +14,19 @@ import requests
 
 app = FastAPI()
 
-@router.get("/consultar/")
-def get_market_quotes(ticker: str = Query(..., description= "Ticker de uma STOCK"), auth_user= Depends(auth_user)):
-    url = "https://seeking-alpha.p.rapidapi.com/market/get-realtime-quotes"
-    querystring = {"symbols": ticker}
+@router.get("/consultar/", summary = "Consultar infos de Mercado", description = "Consultar principais infos diárias de Mercado")
+def get_stocks_prices(
+    token: str = Depends(verify_credentials)  # Validate JWT token before proceeding
+):
+    if not RAPIDAPI_KEY:
+        raise HTTPException(status_code=500, detail="Chave API não configurada")
+
+    url = "https://seeking-alpha.p.rapidapi.com/market/get-day-watch"
     headers = {
-        "X-RapidAPI-Key": "9dc0cd25c5msh7093cea7eab33dbp1ed6d1jsne0b3a44acc73",
+        "X-RapidAPI-Key": RAPIDAPI_KEY,
         "X-RapidAPI-Host": "seeking-alpha.p.rapidapi.com"
     }
-
-    response = requests.get(url, headers=headers, params=querystring)
+    response = requests.get(url, headers=headers)
     
     if response.status_code != 200:
         raise HTTPException(status_code=response.status_code, detail="Erro ao buscar valores de mercado")
