@@ -10,24 +10,14 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-projeto}
     ports:
       - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
 
   app:
-    build: 
-      context: .
-      dockerfile: app/Dockerfile
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    image: davidconselvan/projeto_cloud:latest
     environment:
       SECRET_KEY: ${SECRET_KEY:-da39a3ee5e6b4b0d3255bfef95601890afd80709}
       DATABASE_URL: ${DATABASE_URL:-postgresql://projeto:projeto@db:5432/projeto}
       RAPIDAPI_KEY: ${RAPIDAPI_KEY:-9dc0cd25c5msh7093cea7eab33dbp1ed6d1jsne0b3a44acc73}
-    volumes:
-      - .:/app
     ports:
       - "8000:8000"
     depends_on:
       - db
-
-volumes:
-  postgres_data:
