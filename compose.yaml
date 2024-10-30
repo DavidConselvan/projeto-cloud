@@ -12,7 +12,7 @@ services:
       - "5432:5432"
 
   app:
-    image: davidconselvan/projeto_cloud:latest
+    image: davidconselvan/projeto-cloud:latest
     environment:
       SECRET_KEY: ${SECRET_KEY:-da39a3ee5e6b4b0d3255bfef95601890afd80709}
       DATABASE_URL: ${DATABASE_URL:-postgresql://projeto:projeto@db:5432/projeto}
