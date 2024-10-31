@@ -1,12 +1,10 @@
 # Projeto de Web Scraping com API REST
 
 ## Nome do Aluno
+
 **Nome:** David Matheus Seixas Conselvan
 
 ---
-
-## Documentação
-- [Github Page](https://davidconselvan.github.io/projeto-cloud/)  
 
 ## Explicação do Projeto
 
@@ -24,29 +22,30 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 ## Como Executar a Aplicação
 
 1. **Pré-requisitos**:
-   - Docker e Docker Compose instalados
+    - Docker e Docker Compose instalados
 
 2. **Passos para execução**:
-   - Baixe o arquivo **compose.yaml**:  
-      - [compose.yaml](https://raw.githubusercontent.com/DavidConselvan/projeto-cloud/refs/heads/main/compose.yaml)  
+      - Baixe o arquivo **compose.yaml**:  
+        [compose.yaml](https://raw.githubusercontent.com/DavidConselvan/projeto-cloud/refs/heads/main/compose.yaml)  
 
-   - Rodar o container:  
-    Com o Docker ativo, execute o docker compose  dentro da pasta onde o arquivo compose.yaml foi baixado:
+    - Rode o container:  
+        Com o Docker ativo, execute o docker compose  dentro da pasta onde o arquivo compose.yaml foi baixado:
 
-     ```bash
-     docker compose up
-     ```
-   - Acesse o Swagger (FastAPI) para testar os endpoints da API, em:
-     ```bash
-     http://localhost:8000/docs#
-     ```
-
-    - Parar o container:  
-    Quando terminar, pare o container usando:
       ```bash
-      docker compose down
+      docker compose up
       ```
----
+
+    - Acesse o Swagger (FastAPI) para testar os endpoints da API, em:
+
+    ```bash
+    http://localhost:8000/docs#
+    ```
+
+    - Quando terminar, pare o container usando:  
+
+    ```bash
+    docker compose down
+    ```
 
 ## Documentação dos Endpoints da API
 
@@ -74,9 +73,9 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 
 - **Teste Registrar**
   
-  ![Teste Registrar](assets/registrar.png)
-
-
+  <div style="text-align: center;">
+    <img src="assets/registrar.png" alt="Teste Registrar" width="100%" height = "520">
+  </div>
 
 
 ### POST /login
@@ -102,12 +101,14 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 
 - **Teste Login**
   
-  ![Teste Login](assets/login.png)  
-
+  <div style="text-align: center;">
+    <img src="assets/login.png" alt="Teste Registrar" width="100%" height = "520px">
+  </div>
 
 > 💡 **Atenção!**
 > 
 > O token JWT gerado é válido por apenas 30 minutos. Após esse período será necessário logar novamente e gerar outro token.
+
 
 ### GET /consultar
 - **Descrição**: Verifica se o usuário está autenticado e então consulta e devolve dados externos que contém as principais informações diárias de mercado 
@@ -144,14 +145,18 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
   ```
 
 - **Teste Consulta**  
-  - Autenticação:
+    - *Autenticação*:
 
-    ![Teste Login](assets/autenticacao.png)  
+    <div style="text-align: center;">
+    <img src="assets/autenticacao.png" alt="Teste Registrar" width="100%" height = "520">
+  </div>
 
-  - Resposta:
+    - *Resposta*:
 
-    ![Teste Login](assets/api_externa.png)  
+    <div style="text-align: center;">
+    <img src="assets/api_externa.png" alt="Teste Registrar" width="100%" height = "520">
+  </div> 
 
-- **Video de execução da API**   
+###Video de execução da API
 
-    [![Execução](https://img.youtube.com/vi/BZPGxcwkEGI/0.jpg)](https://www.youtube.com/watch?v=BZPGxcwkEGI)
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/BZPGxcwkEGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
