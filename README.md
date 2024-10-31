@@ -137,6 +137,7 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 
 - **Teste Consulta**  
   - Autenticação:
+  
     ![Teste Login](assets\autenticacao.png)  
 
   - Resposta:
