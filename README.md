@@ -1,5 +1,5 @@
 ## Documentação Oficial
-- [Github Page](https://davidconselvan.github.io/projeto-cloud/)
+- [Github Pages](https://davidconselvan.github.io/projeto-cloud/)
 
 ---
 
