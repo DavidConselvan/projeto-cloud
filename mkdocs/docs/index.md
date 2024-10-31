@@ -71,7 +71,7 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 
 - **Copie e guarde o token gerado!**
 
-- **Teste Registrar**
+- **Teste Registrar:**
   
   <div style="text-align: center;">
     <img src="assets/registrar.png" alt="Teste Registrar" width="100%" height = "520">
@@ -99,7 +99,7 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
   
 - **Copie e guarde o token gerado!**
 
-- **Teste Login**
+- **Teste Login:**
   
   <div style="text-align: center;">
     <img src="assets/login.png" alt="Teste Registrar" width="100%" height = "520px">
