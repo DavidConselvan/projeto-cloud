@@ -144,6 +144,7 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 
     ![Teste Login](assets/api_externa.png)  
 
-- **Video de execução da API**   
+- **Video de execução da API**
 
-    [![Execução](https://img.youtube.com/vi/BZPGxcwkEGI/0.jpg)](https://www.youtube.com/watch?v=BZPGxcwkEGI)
+<iframe width="560" height="315" src="https://youtu.be/BZPGxcwkEGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
