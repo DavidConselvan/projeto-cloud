@@ -58,12 +58,14 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
     "name": "João da Silva",
     "password": "12345678"
   }
+  ```
   
 - **Exemplo de Resposta**:
   ```json
   {
     "jwt": "token_autenticacao"
   }
+  ```
 
 - **Copie e guarde o token gerado!**
 
@@ -84,12 +86,14 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
     "email": "joaosilva@gmail.com",
     "password": "12345678"
   }
+  ```
   
 - **Exemplo de Resposta**:
   ```json
   {
     "jwt": "token_autenticacao"
   }
+  ```
   
 - **Copie e guarde o token gerado!**
 
@@ -134,6 +138,7 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
     }
     ...
   }
+  ```
 
 - **Teste Consulta**  
   - Autenticação:
