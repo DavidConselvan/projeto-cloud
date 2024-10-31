@@ -69,7 +69,7 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 
 - **Teste Registrar**
   
-  ![Teste Registrar](/documentation/docs/assets/registrar.png)
+  ![Teste Registrar](assets/registrar.png)
 
 
 
@@ -95,7 +95,7 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 
 - **Teste Login**
   
-  ![Teste Login](/documentation/docs/assets/login.png)  
+  ![Teste Login](assets/login.png)  
 
 
 > 💡 **Atenção!**
@@ -138,11 +138,11 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 - **Teste Consulta**  
   - Autenticação:
 
-    ![Teste Login](/documentation/docs/assets/autenticacao.png)  
+    ![Teste Login](assets/autenticacao.png)  
 
   - Resposta:
 
-    ![Teste Login](/documentation/docs/assets/api_externa.png)  
+    ![Teste Login](assets/api_externa.png)  
 
 - **Video de execução da API**   
 
