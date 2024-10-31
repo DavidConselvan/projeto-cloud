@@ -6,7 +6,9 @@
 ---
 
 ## Documentação Oficial
-- [Github Page](https://davidconselvan.github.io/projeto-cloud/)  
+- [Github Page](https://davidconselvan.github.io/projeto-cloud/)
+
+---
 
 ## Explicação do Projeto
 
