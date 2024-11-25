@@ -52,9 +52,7 @@
 
 - **Teste Registrar:**
   
-  <div style="text-align: center;">
-    <img src="mkdocs\docs\assets\registrar.pngg" alt="Teste Registrar" width="100%" height = "520">
-  </div>
+  ![Registrar](assets/registrar.png)
 
 
 ### POST /login
@@ -80,9 +78,7 @@
 
 - **Teste Login:**
   
-  <div style="text-align: center;">
-    <img src="mkdocs\docs\assets\login.png" alt="Teste Login" width="100%" height = "520px">
-  </div>
+  ![Login](assets/login.png)
 
 > 💡 **Atenção!**
 > 
@@ -126,15 +122,11 @@
 - **Teste Consulta**  
     - *Autenticação*:
 
-    <div style="text-align: center;">
-    <img src="mkdocs\docs\assets\autenticacao.png" alt="Teste Autenticação" width="100%" height = "520">
-  </div>
+    ![Autenticação](assets/autenticacao.png)
 
     - *Resposta*:
 
-    <div style="text-align: center;">
-    <img src="mkdocs\docs\assets\api_externa.png" alt="Teste API Externa" width="100%" height = "520">
-  </div> 
+    ![API Externa](assets/api_externa.png)
 
 ###Video de execução da API
 
