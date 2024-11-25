@@ -52,7 +52,7 @@
 
 - **Teste Registrar:**
   
-  ![Registrar](assets/registrar.png)
+  ![Autenticação](assets/registrar.png)
 
 
 ### POST /login
