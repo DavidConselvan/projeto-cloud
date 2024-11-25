@@ -10,6 +10,8 @@ Este tutorial mostra o processo de implantação de uma aplicação FastAPI inte
 ## Passo 0: Baixar o Eksctl no CloudShell na versão UNIX
 
 - Rode os comandos abaixo:
+
+
 ```bash
 # for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`
 ARCH=amd64
@@ -184,3 +186,6 @@ kubectl get svc fastapi-service
 
 - O comando retornará o EXTERNAL-IP do serviço. Use este IP para acessar sua aplicação em um navegador ou cliente de API.
 
+## Video Demonstrativo:
+
+<iframe width="100%" height="315" src="https://youtu.be/U7clwaL9NOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
