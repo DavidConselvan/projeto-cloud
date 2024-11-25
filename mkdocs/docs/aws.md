@@ -5,7 +5,26 @@ Este tutorial mostra o processo de implantação de uma aplicação FastAPI inte
 ## A aplicação está disponível em:
 [App](http://ab4f4cec60b844f04afec87e03a9d22b-553677351.us-east-2.elb.amazonaws.com/docs#)
 
-## Implantação pelo AWS Cloudshell
+## Implantação pelo AWS CloudShell
+
+## Passo 0: Baixar o Eksctl no CloudShell na versão UNIX
+
+- Rode os comandos abaixo:
+```bash
+# for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`
+ARCH=amd64
+PLATFORM=$(uname -s)_$ARCH
+
+curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
+
+# (Optional) Verify checksum
+curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_checksums.txt" | grep $PLATFORM | sha256sum --check
+
+tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
+
+sudo mv /tmp/eksctl /usr/local/bin
+```
+
 
 ## Passo 1: Criar o Cluster EKS
 
