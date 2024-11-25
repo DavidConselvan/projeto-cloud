@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://DavidConselvan.github.io/API-RESTful-CLOUD/">
+        <link rel="canonical" href="https://DavidConselvan.github.io/API-RESTful-CLOUD/docker/">
       
       
+        <link rel="prev" href="..">
       
-        <link rel="next" href="docker/">
+      
+        <link rel="next" href="../aws/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>API RESTful Cloud</title>
+        <title>Docker - API RESTful Cloud</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-scraping-com-api-rest-docker-e-aws" class="md-skip">
+        <a href="#como-executar-a-aplicacao" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="API RESTful Cloud" class="md-header__button md-logo" aria-label="API RESTful Cloud" data-md-component="logo">
+    <a href=".." title="API RESTful Cloud" class="md-header__button md-logo" aria-label="API RESTful Cloud" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Docker
             
           </span>
         </div>
@@ -211,7 +213,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="API RESTful Cloud" class="md-nav__button md-logo" aria-label="API RESTful Cloud" data-md-component="logo">
+    <a href=".." title="API RESTful Cloud" class="md-nav__button md-logo" aria-label="API RESTful Cloud" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -226,6 +228,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -235,25 +257,23 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Home
+    Docker
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Home
+    Docker
   </span>
   
 
@@ -265,8 +285,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -275,52 +293,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nome-do-aluno" class="md-nav__link">
+  <a href="#como-executar-a-aplicacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Nome do Aluno
+      Como Executar a Aplicação
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview-do-projeto" class="md-nav__link">
+  <a href="#documentacao-dos-endpoints-da-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview do Projeto
+      Documentação dos Endpoints da API
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview do Projeto">
+    <nav class="md-nav" aria-label="Documentação dos Endpoints da API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-api-oferece-tres-endpoints-principais" class="md-nav__link">
+  <a href="#post-registrar" class="md-nav__link">
     <span class="md-ellipsis">
-      A API oferece três endpoints principais:
+      POST /registrar
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repositorios" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#post-login" class="md-nav__link">
     <span class="md-ellipsis">
-      Repositórios
+      POST /login
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Repositórios">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#documentacao-aplicacoes" class="md-nav__link">
+  <a href="#get-consultar" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentação Aplicações:
+      GET /consultar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-de-execucao-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video de execução da API
     </span>
   </a>
   
@@ -346,27 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docker
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="aws/" class="md-nav__link">
+      <a href="../aws/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -396,8 +397,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -406,52 +405,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nome-do-aluno" class="md-nav__link">
+  <a href="#como-executar-a-aplicacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Nome do Aluno
+      Como Executar a Aplicação
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview-do-projeto" class="md-nav__link">
+  <a href="#documentacao-dos-endpoints-da-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview do Projeto
+      Documentação dos Endpoints da API
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview do Projeto">
+    <nav class="md-nav" aria-label="Documentação dos Endpoints da API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-api-oferece-tres-endpoints-principais" class="md-nav__link">
+  <a href="#post-registrar" class="md-nav__link">
     <span class="md-ellipsis">
-      A API oferece três endpoints principais:
+      POST /registrar
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repositorios" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#post-login" class="md-nav__link">
     <span class="md-ellipsis">
-      Repositórios
+      POST /login
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Repositórios">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#documentacao-aplicacoes" class="md-nav__link">
+  <a href="#get-consultar" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentação Aplicações:
+      GET /consultar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-de-execucao-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video de execução da API
     </span>
   </a>
   
@@ -477,34 +479,172 @@
                   
 
 
-<h1 id="web-scraping-com-api-rest-docker-e-aws">Web Scraping com API REST: Docker e AWS</h1>
-<h2 id="nome-do-aluno">Nome do Aluno</h2>
-<p><strong>Nome:</strong> David Matheus Seixas Conselvan</p>
-<hr />
-<h2 id="overview-do-projeto">Overview do Projeto</h2>
-<p>Este projeto consiste em uma aplicação de scraping para extrair dados de fontes específicas da web e disponibilizá-los por meio de uma API RESTful, sem interface gráfica, construída utilizando FastAPI e PostgreSQL. A arquitetura é baseada em contêineres para garantir portabilidade e facilidade de execução, com as imagens hospedadas no Docker Hub.</p>
-<p>A aplicação foi implantada na AWS utilizando o Elastic Kubernetes Service (EKS), uma ferramenta gerenciada para execução do Kubernetes. O Kubernetes automatiza a implantação, o dimensionamento e a gestão de aplicações em contêineres. No ambiente EKS, dois pods foram criados:</p>
+  <h1>Docker</h1>
+
+<h2 id="como-executar-a-aplicacao">Como Executar a Aplicação</h2>
+<ol>
+<li>
+<p><strong>Pré-requisitos</strong>:</p>
 <ul>
-<li>Um para a aplicação FastAPI.</li>
-<li>Outro para o banco de dados PostgreSQL.</li>
+<li>Docker e Docker Compose instalados</li>
 </ul>
-<p>A comunicação entre os pods foi configurada para que a aplicação possa acessar o banco de dados e realizar as operações descritas. O uso do EKS garante escalabilidade, resiliência e gestão eficiente da aplicação em produção.</p>
-<h3 id="a-api-oferece-tres-endpoints-principais">A API oferece três endpoints principais:</h3>
+</li>
+<li>
+<p><strong>Passos para execução</strong>:</p>
 <ul>
-<li>Registro de usuário: Permite criar novos usuários e devolve um token JWT para autenticação.</li>
-<li>Login: Permite que usuários registrados façam login e obtenham o mesmo token JWT.</li>
-<li>Consulta de dados externos: Acessa dados diários do mercado financeiro de uma API externa, exigindo autenticação com o token JWT.</li>
+<li>
+<p>Baixe o arquivo <strong>compose.yaml</strong>:<br />
+<a href="https://raw.githubusercontent.com/DavidConselvan/projeto-cloud/refs/heads/main/compose.yaml">compose.yaml</a>  </p>
+</li>
+<li>
+<p>Rode o container:<br />
+    Com o Docker ativo, execute o docker compose  dentro da pasta onde o arquivo compose.yaml foi baixado:</p>
+</li>
 </ul>
-<hr />
-<h2 id="repositorios">Repositórios</h2>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up
+</code></pre></div>
 <ul>
-<li><a href="https://github.com/DavidConselvan/projeto-cloud">Github</a>  </li>
-<li><a href="https://hub.docker.com/repository/docker/davidconselvan/projeto-cloud/general">Docker Hub</a></li>
+<li>Acesse o Swagger (FastAPI) para testar os endpoints da API, em:</li>
 </ul>
-<hr />
-<h3 id="documentacao-aplicacoes">Documentação Aplicações:</h3>
-<p><a href="docker/">Aplicação Local</a>
-<a href="aws/">Aplicação AWS</a></p>
+<div class="highlight"><pre><span></span><code>http://localhost:8000/docs#
+</code></pre></div>
+<ul>
+<li>Quando terminar, pare o container usando:  </li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>down
+</code></pre></div>
+</li>
+</ol>
+<h2 id="documentacao-dos-endpoints-da-api">Documentação dos Endpoints da API</h2>
+<h3 id="post-registrar">POST /registrar</h3>
+<ul>
+<li>
+<p><strong>Descrição</strong>: Registra um novo usuário e retorna seu token de autenticação</p>
+</li>
+<li>
+<p><strong>Exemplo de Body da Requisição</strong>:  </p>
+<ul>
+<li>Insira os dados necessários no seguinte formato:
+  <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;joaosilva@gmail.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;João da Silva&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345678&quot;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Exemplo de Resposta</strong>:
+  <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;token_autenticacao&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Copie e guarde o token gerado!</strong></p>
+</li>
+<li>
+<p><strong>Teste Registrar:</strong></p>
+</li>
+</ul>
+<div style="text-align: center;">
+    <img src="assets/registrar.png" alt="Teste Registrar" width="100%" height = "520">
+  </div>
+
+<h3 id="post-login">POST /login</h3>
+<ul>
+<li>
+<p><strong>Descrição</strong>: Verifica credenciais de usuário e retorna seu token de autenticação</p>
+</li>
+<li>
+<p><strong>Exemplo de Body da Requisição</strong>:  </p>
+<ul>
+<li>Insira seus dados no seguinte formato:
+  <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;joaosilva@gmail.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345678&quot;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Exemplo de Resposta</strong>:
+  <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;token_autenticacao&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Copie e guarde o token gerado!</strong></p>
+</li>
+<li>
+<p><strong>Teste Login:</strong></p>
+</li>
+</ul>
+<div style="text-align: center;">
+    <img src="assets/login.png" alt="Teste Registrar" width="100%" height = "520px">
+  </div>
+
+<blockquote>
+<p>💡 <strong>Atenção!</strong></p>
+<p>O token JWT gerado é válido por apenas 30 minutos. Após esse período será necessário logar novamente e gerar outro token.</p>
+</blockquote>
+<h3 id="get-consultar">GET /consultar</h3>
+<ul>
+<li>
+<p><strong>Descrição</strong>: Verifica se o usuário está autenticado e então consulta e devolve dados externos que contém as principais informações diárias de mercado </p>
+</li>
+<li>
+<p><strong>Autenticação</strong>:  Faça a autenticação clicando no cadeado no canto direito do endpoint, depois insira seu token JWT obtido anteriormente e clique em <strong>"Authorize"</strong></p>
+</li>
+<li>
+<p>Uma vez autenticado, execute a requisição</p>
+</li>
+<li>
+<p><strong>Exemplo de Resposta</strong>:
+  <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;day_watch&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;top_gainers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">606232</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROOT&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Root, Inc.&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3251</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ATEC&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alphatec Holdings, Inc.&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="err">...</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span><span class="w">     </span>
+<span class="w">    </span><span class="err">...</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Teste Consulta</strong>  </p>
+<ul>
+<li><em>Autenticação</em>:</li>
+</ul>
+<p><div style="text-align: center;">
+<img src="assets/autenticacao.png" alt="Teste Registrar" width="100%" height = "520">
+  </div></p>
+<ul>
+<li><em>Resposta</em>:</li>
+</ul>
+<p><div style="text-align: center;">
+<img src="assets/api_externa.png" alt="Teste Registrar" width="100%" height = "520">
+  </div> </p>
+</li>
+</ul>
+<h3 id="video-de-execucao-da-api">Video de execução da API</h3>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/BZPGxcwkEGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
@@ -551,10 +691,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
