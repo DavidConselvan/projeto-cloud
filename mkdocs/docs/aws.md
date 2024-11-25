@@ -2,6 +2,9 @@
 
 Este tutorial mostra o processo de implantação de uma aplicação FastAPI integrada a um banco de dados PostgreSQL no Amazon Elastic Kubernetes Service (EKS). A aplicação utiliza o Kubernetes para orquestração, automatizando o deploy, o escalonamento e a gestão de workloads em contêineres. Ao final, a aplicação estará rodando na AWS, acessível através de um endpoint público.
 
+## A aplicação está disponível em:
+[App][http://ab4f4cec60b844f04afec87e03a9d22b-553677351.us-east-2.elb.amazonaws.com/docs#]
+
 ## Implantação pelo AWS Cloudshell
 
 ## Passo 1: Criar o Cluster EKS
