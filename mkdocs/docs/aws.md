@@ -188,4 +188,4 @@ kubectl get svc fastapi-service
 
 ## Video Demonstrativo:
 
-<iframe width="100%" height="315" src="https://youtu.be/U7clwaL9NOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://youtu.be/embed/U7clwaL9NOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
