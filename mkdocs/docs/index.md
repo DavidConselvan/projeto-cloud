@@ -1,4 +1,4 @@
-# Projeto de Web Scraping com API REST
+# Web Scraping com API REST: Docker e AWS
 
 ## Nome do Aluno
 
@@ -6,11 +6,22 @@
 
 ---
 
-## Explicação do Projeto
+## Overview do Projeto
 
-Este projeto consiste em uma aplicação de scraping para extrair dados de fontes específicas da web e disponibilizá-los por meio de uma API RESTful, sem interface gráfica, construída a utilizando FastAPI e PostgreSQL. Possui uma arquitetura baseada em contêineres para garantir a portabilidade e a facilidade de execução, com as imagens hospedadas no Docker Hub.
+Este projeto consiste em uma aplicação de scraping para extrair dados de fontes específicas da web e disponibilizá-los por meio de uma API RESTful, sem interface gráfica, construída utilizando FastAPI e PostgreSQL. A arquitetura é baseada em contêineres para garantir portabilidade e facilidade de execução, com as imagens hospedadas no Docker Hub.
 
-A API oferece três endpoints, um para registro do usuário que devolve um token de autenticação jwt, um para login que devolve o mesmo token e um de consulta a uma api externa que devolve dados diários do mercado financeiro e que demanda que o usuário esteja autenticado.
+A aplicação foi implantada na AWS utilizando o Elastic Kubernetes Service (EKS), uma ferramenta gerenciada para execução do Kubernetes. O Kubernetes automatiza a implantação, o dimensionamento e a gestão de aplicações em contêineres. No ambiente EKS, dois pods foram criados:
+
+- Um para a aplicação FastAPI.
+- Outro para o banco de dados PostgreSQL.
+
+A comunicação entre os pods foi configurada para que a aplicação possa acessar o banco de dados e realizar as operações descritas. O uso do EKS garante escalabilidade, resiliência e gestão eficiente da aplicação em produção.
+
+### A API oferece três endpoints principais:
+
+- Registro de usuário: Permite criar novos usuários e devolve um token JWT para autenticação.
+- Login: Permite que usuários registrados façam login e obtenham o mesmo token JWT.
+- Consulta de dados externos: Acessa dados diários do mercado financeiro de uma API externa, exigindo autenticação com o token JWT.
 
 ---
 
@@ -19,144 +30,6 @@ A API oferece três endpoints, um para registro do usuário que devolve um token
 - [Docker Hub](https://hub.docker.com/repository/docker/davidconselvan/projeto-cloud/general)
 ---
 
-## Como Executar a Aplicação
-
-1. **Pré-requisitos**:
-    - Docker e Docker Compose instalados
-
-2. **Passos para execução**:
-      - Baixe o arquivo **compose.yaml**:  
-        [compose.yaml](https://raw.githubusercontent.com/DavidConselvan/projeto-cloud/refs/heads/main/compose.yaml)  
-
-    - Rode o container:  
-        Com o Docker ativo, execute o docker compose  dentro da pasta onde o arquivo compose.yaml foi baixado:
-
-      ```bash
-      docker compose up
-      ```
-
-    - Acesse o Swagger (FastAPI) para testar os endpoints da API, em:
-
-    ```bash
-    http://localhost:8000/docs#
-    ```
-
-    - Quando terminar, pare o container usando:  
-
-    ```bash
-    docker compose down
-    ```
-
-## Documentação dos Endpoints da API
-
-### POST /registrar
-- **Descrição**: Registra um novo usuário e retorna seu token de autenticação
-
-- **Exemplo de Body da Requisição**:  
-    - Insira os dados necessários no seguinte formato:
-  ```json
-  {
-    "email": "joaosilva@gmail.com",
-    "name": "João da Silva",
-    "password": "12345678"
-  }
-  ```
-  
-- **Exemplo de Resposta**:
-  ```json
-  {
-    "jwt": "token_autenticacao"
-  }
-  ```
-
-- **Copie e guarde o token gerado!**
-
-- **Teste Registrar:**
-  
-  <div style="text-align: center;">
-    <img src="assets/registrar.png" alt="Teste Registrar" width="100%" height = "520">
-  </div>
-
-
-### POST /login
-- **Descrição**: Verifica credenciais de usuário e retorna seu token de autenticação
-
-- **Exemplo de Body da Requisição**:  
-    - Insira seus dados no seguinte formato:
-  ```json
-  {
-    "email": "joaosilva@gmail.com",
-    "password": "12345678"
-  }
-  ```
-  
-- **Exemplo de Resposta**:
-  ```json
-  {
-    "jwt": "token_autenticacao"
-  }
-  ```
-  
-- **Copie e guarde o token gerado!**
-
-- **Teste Login:**
-  
-  <div style="text-align: center;">
-    <img src="assets/login.png" alt="Teste Registrar" width="100%" height = "520px">
-  </div>
-
-> 💡 **Atenção!**
-> 
-> O token JWT gerado é válido por apenas 30 minutos. Após esse período será necessário logar novamente e gerar outro token.
-
-
-### GET /consultar
-- **Descrição**: Verifica se o usuário está autenticado e então consulta e devolve dados externos que contém as principais informações diárias de mercado 
-
-- **Autenticação**:  Faça a autenticação clicando no cadeado no canto direito do endpoint, depois insira seu token JWT obtido anteriormente e clique em **"Authorize"**
-
-- Uma vez autenticado, execute a requisição
-
-- **Exemplo de Resposta**:
-  ```json
-  {
-    "data": {
-      "id": "0",
-      "type": "day_watch",
-      "attributes": {
-        "top_gainers": [
-          {
-            "id": 606232,
-            "slug": "ROOT",
-            "name": "Root, Inc."
-          },
-          {
-            "id": 3251,
-            "slug": "ATEC",
-            "name": "Alphatec Holdings, Inc."
-          },
-          ...
-        ]
-      }     
-      ...
-    }
-    ...
-  }
-  ```
-
-- **Teste Consulta**  
-    - *Autenticação*:
-
-    <div style="text-align: center;">
-    <img src="assets/autenticacao.png" alt="Teste Registrar" width="100%" height = "520">
-  </div>
-
-    - *Resposta*:
-
-    <div style="text-align: center;">
-    <img src="assets/api_externa.png" alt="Teste Registrar" width="100%" height = "520">
-  </div> 
-
-###Video de execução da API
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/BZPGxcwkEGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+### Documentação Aplicações:
+[Aplicação Local](docker.md)
+[Aplicação AWS](aws.md)

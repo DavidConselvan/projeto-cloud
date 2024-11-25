@@ -2,6 +2,8 @@ site_name: API RESTful Cloud
 site_description: Aplicação de web scraping que extrai dados de fontes específicas e os disponibiliza por meio de uma API RESTful construída com FastAPI e PostgreSQL. Utiliza uma arquitetura baseada em contêineres para portabilidade e facilidade de implantação, com imagens hospedadas no Docker Hub.
 nav:
   - Home: index.md
+  - Docker : docker.md
+  - AWS : aws.md
 
 site_url: https://DavidConselvan.github.io/API-RESTful-CLOUD/
 theme:
