@@ -410,6 +410,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Demonstrativo:
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -540,6 +549,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Demonstrativo:
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -562,7 +580,8 @@
 <h2 id="implantacao-pelo-aws-cloudshell">Implantação pelo AWS CloudShell</h2>
 <h2 id="passo-0-baixar-o-eksctl-no-cloudshell-na-versao-unix">Passo 0: Baixar o Eksctl no CloudShell na versão UNIX</h2>
 <ul>
-<li>Rode os comandos abaixo:
+<li>Rode os comandos abaixo:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`</span>
 <span class="nv">ARCH</span><span class="o">=</span>amd64
 <span class="nv">PLATFORM</span><span class="o">=</span><span class="k">$(</span>uname<span class="w"> </span>-s<span class="k">)</span>_<span class="nv">$ARCH</span>
@@ -575,8 +594,7 @@ curl<span class="w"> </span>-sL<span class="w"> </span><span class="s2">&quot;ht
 tar<span class="w"> </span>-xzf<span class="w"> </span>eksctl_<span class="nv">$PLATFORM</span>.tar.gz<span class="w"> </span>-C<span class="w"> </span>/tmp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>eksctl_<span class="nv">$PLATFORM</span>.tar.gz
 
 sudo<span class="w"> </span>mv<span class="w"> </span>/tmp/eksctl<span class="w"> </span>/usr/local/bin
-</code></pre></div></li>
-</ul>
+</code></pre></div>
 <h2 id="passo-1-criar-o-cluster-eks">Passo 1: Criar o Cluster EKS</h2>
 <ul>
 <li>Primeiro, crie um cluster EKS para hospedar sua aplicação e banco de dados.</li>
@@ -740,6 +758,8 @@ kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> <
 <ul>
 <li>O comando retornará o EXTERNAL-IP do serviço. Use este IP para acessar sua aplicação em um navegador ou cliente de API.</li>
 </ul>
+<h2 id="video-demonstrativo">Video Demonstrativo:</h2>
+<iframe width="100%" height="315" src="https://youtu.be/U7clwaL9NOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
