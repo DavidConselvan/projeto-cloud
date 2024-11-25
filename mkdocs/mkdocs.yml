@@ -5,7 +5,7 @@ nav:
   - Docker : docker.md
   - AWS : aws.md
 
-site_url: https://DavidConselvan.github.io/API-RESTful-CLOUD/
+site_url: https://davidconselvan.github.io/projeto-cloud/
 theme:
   name: material
   highlightjs: true
